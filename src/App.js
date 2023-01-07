@@ -1,4 +1,6 @@
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.css";
+
 import Msg from "./components/Msg";
 import Clock from "./components/Clock";
 import Card from "./components/Card";
@@ -14,9 +16,9 @@ const img2_style = {
 };
 
 function App() {
-  let isLoggedIn = false;
-  let userIsRegistered = true;
-  let currentTime = new Date().getHours();
+  // let isLoggedIn = false;
+  let userIsRegistered = false;
+  // let currentTime = new Date().getHours();
 
   return (
     <div className="App">
@@ -46,10 +48,10 @@ function App() {
         }
       />
 
-      {userIsRegistered && <Register />}
+      {userIsRegistered ? <Login /> : <Register />}
 
-      {isLoggedIn && <Login />}
-      {currentTime > 15 && <h3>Why you are still working?</h3>}
+      {/* {isLoggedIn && <Login />}
+      {currentTime > 15 && <h3>Why you are still working?</h3>} */}
     </div>
   );
 }

@@ -1,13 +1,13 @@
 import React from "react";
 import Input from "./Input";
-import "bootstrap/dist/css/bootstrap.css";
+import Button from "./Button";
 
 function Login() {
   return (
     <div>
       <Input type={"text"} placeholder={"Username"} />
       <Input type={"password"} placeholder={"Password"} />
-      <button type="submit">Login</button>
+      <Button type="submit" name="Login" />
     </div>
   );
 }
