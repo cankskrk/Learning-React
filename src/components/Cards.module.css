@@ -2,10 +2,9 @@
     font-family: monospace;
     color: blue;
     margin: 2rem auto;
-    width: 12rem;
-    padding: 0 1rem;
+    width: 14rem;
+    padding: 1rem 1rem;
     background-color: orange;
     border: solid 2px black;
     box-shadow: 1rem 1rem 0.5rem darkgrey;
-
 }
