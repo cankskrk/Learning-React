@@ -8,7 +8,7 @@ function Register() {
       <Input type="text" placeholder="Username" />
       <Input type="password" placeholder="Password" />
       <Input type="password" placeholder="Confirm Password" />
-      <Button type="submit" name="Register" />
+      <Button type="submit" name="Register" className="btn-primary" />
     </div>
   );
 }

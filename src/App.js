@@ -6,6 +6,7 @@ import Clock from "./components/Clock";
 import Card from "./components/Card";
 import Login from "./components/Login";
 import Register from "./components/Register";
+import Counter from "./components/Counter";
 
 const img = "https://picsum.photos/200";
 const img2 = "https://picsum.photos/";
@@ -52,6 +53,8 @@ function App() {
 
       {/* {isLoggedIn && <Login />}
       {currentTime > 15 && <h3>Why you are still working?</h3>} */}
+
+      <Counter />
     </div>
   );
 }
