@@ -1,9 +1,17 @@
 import React from "react";
 
-function Input({ type, placeholder }) {
+function Input({ type, placeholder, className }) {
   return (
-    <div>
-      <input className="m-1" type={type} placeholder={placeholder} />
+    <div className="container">
+      <div className="row">
+        <div className="col-sm-4 offset-sm-4">
+          <input
+            className={`form-control ${className}`}
+            type={type}
+            placeholder={placeholder}
+          />
+        </div>
+      </div>
     </div>
   );
 }

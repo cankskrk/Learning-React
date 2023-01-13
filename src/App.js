@@ -10,6 +10,7 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import Counter from "./components/Counter";
 import Time from "./components/Time";
+import EventHandle from "./components/EventHandle";
 
 // Objects Files
 import cars from "./components/ObjectsFile/car";
@@ -35,8 +36,8 @@ const img = "https://picsum.photos/200";
 const img2 = "https://picsum.photos/";
 const img2_style = {
   border: "0.25rem solid black",
-  boxShadow: "4rem 4rem 1rem darkgrey",
-  margin: "2rem",
+  boxShadow: "2rem 2rem 0.5rem darkgrey",
+  margin: "1rem",
 };
 
 // Main Function
@@ -50,7 +51,7 @@ function App() {
       <Msg />
       <img src={img + "?grayscale"} alt="Lorem Picsum" />
       <div>
-        <img style={img2_style} src={img2 + "400"} alt="Lorem Picsum" />
+        <img style={img2_style} src={img2 + "200"} alt="Lorem Picsum" />
       </div>
       <Clock
         margin={4}
@@ -107,6 +108,8 @@ function App() {
           </tbody>
         </table>
       </div>
+
+      <EventHandle />
     </div>
   );
 }
