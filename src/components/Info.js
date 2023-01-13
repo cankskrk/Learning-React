@@ -1,5 +1,5 @@
 import React from "react";
-import infoCSS from "./Info.module.css";
+import infoCSS from "./CssFile/Info.module.css";
 
 function Info({ name, description }) {
   return (

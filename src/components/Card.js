@@ -1,5 +1,5 @@
 import React from "react";
-import Cards from "./Cards.module.css";
+import Cards from "./CssFile/Cards.module.css";
 import Info from "./Info";
 
 // const customStyle = {
