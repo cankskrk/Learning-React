@@ -1,6 +1,8 @@
+// CSS Files
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 
+// Components
 import Msg from "./components/Msg";
 import Clock from "./components/Clock";
 import Card from "./components/Card";
@@ -9,6 +11,26 @@ import Register from "./components/Register";
 import Counter from "./components/Counter";
 import Time from "./components/Time";
 
+// Objects Files
+import cars from "./components/ObjectsFile/car";
+const [honda, tesla] = cars;
+const {
+  speedStats: { topSpeed: hondaTopSpeed },
+} = honda;
+
+const {
+  speedStats: { topSpeed: teslaTopSpeed },
+} = tesla;
+
+const {
+  coloursByPopularity: [hondaTopColour],
+} = honda;
+
+const {
+  coloursByPopularity: [teslaTopColour],
+} = tesla;
+
+// Endpoints
 const img = "https://picsum.photos/200";
 const img2 = "https://picsum.photos/";
 const img2_style = {
@@ -17,6 +39,7 @@ const img2_style = {
   margin: "2rem",
 };
 
+// Main Function
 function App() {
   // let isLoggedIn = false;
   let userIsRegistered = false;
@@ -57,6 +80,33 @@ function App() {
 
       <Counter />
       <Time />
+
+      <div className="m-5 p-5">
+        <table class="table table-striped table-dark border border-2 border-warning">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Brand</th>
+              <th scope="col">Top Speed</th>
+              <th scope="col">Top Colour</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>{tesla.model}</td>
+              <td>{teslaTopSpeed}</td>
+              <td>{teslaTopColour}</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>{honda.model}</td>
+              <td>{hondaTopSpeed}</td>
+              <td>{hondaTopColour}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
