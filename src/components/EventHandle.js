@@ -21,26 +21,29 @@ function EventHandle() {
     setName(event.target.value);
   };
 
-  const handleClick = () => {
+  const handleClick = (event) => {
+    event.preventDefault();
     setHeadingName(name);
   };
 
   return (
     <div className="text-center bg-danger">
       <h1>HELLO {headingName}</h1>
-      <Input
-        type="text"
-        placeholder="What's your name?"
-        onChange={handleChange}
-      />
-      <Button
-        type="submit"
-        name="Submit"
-        className={`btn-light text-primary ${buttonBackground} fw-bolder m-2 border-0`}
-        mouseOver={mouseOver}
-        mouseOut={mouseOut}
-        click={handleClick}
-      />
+      <form onSubmit={handleClick}>
+        <Input
+          type="text"
+          placeholder="What's your name?"
+          onChange={handleChange}
+        />
+        <Button
+          type="submit"
+          name="Submit"
+          className={`btn-light text-primary ${buttonBackground} fw-bolder m-2 border-0`}
+          mouseOver={mouseOver}
+          mouseOut={mouseOut}
+          click={handleClick}
+        />
+      </form>
     </div>
   );
 }
