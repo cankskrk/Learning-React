@@ -1,6 +1,6 @@
 import React from "react";
 
-function Input({ type, placeholder, className }) {
+function Input({ type, placeholder, className, onChange }) {
   return (
     <div className="container">
       <div className="row">
@@ -9,6 +9,7 @@ function Input({ type, placeholder, className }) {
             className={`form-control ${className}`}
             type={type}
             placeholder={placeholder}
+            onChange={onChange}
           />
         </div>
       </div>
