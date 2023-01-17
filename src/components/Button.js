@@ -2,7 +2,7 @@ import React from "react";
 
 function Button({ type, name, click, mouseOver, mouseOut, className }) {
   return (
-    <div>
+    <div className="d-flex align-items-center">
       <button
         className={`btn ${className}`}
         type={type}

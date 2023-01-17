@@ -11,6 +11,7 @@ import Register from "./components/Register";
 import Counter from "./components/Counter";
 import Time from "./components/Time";
 import EventHandle from "./components/EventHandle";
+import Todo from "./components/Todo";
 
 // Objects Files
 import cars from "./components/ObjectsFile/car";
@@ -127,6 +128,7 @@ function App() {
       </div>
 
       <EventHandle />
+      <Todo />
     </div>
   );
 }

@@ -50,29 +50,35 @@ function EventHandle() {
   };
 
   return (
-    <div className="text-center bg-danger">
+    <div className="text-center bg-danger p-4">
       <h1>HELLO {`${fullName.fName} ${fullName.lName}`}</h1>
       <form onSubmit={handleClick}>
-        <Input
-          type="text"
-          name="fName"
-          placeholder="What's your first name?"
-          onChange={handleChange}
-        />
-        <Input
-          type="text"
-          name="lName"
-          placeholder="What's your last name?"
-          onChange={handleChange}
-        />
-        <Button
-          type="submit"
-          name="Submit"
-          className={`btn-light text-primary ${buttonBackground} fw-bolder m-2 border-0`}
-          mouseOver={mouseOver}
-          mouseOut={mouseOut}
-          click={handleClick}
-        />
+        <div className="d-flex justify-content-center m-1">
+          <Input
+            type="text"
+            name="fName"
+            placeholder="What's your first name?"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="d-flex justify-content-center m-1">
+          <Input
+            type="text"
+            name="lName"
+            placeholder="What's your last name?"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="d-flex justify-content-center">
+          <Button
+            type="submit"
+            name="Submit"
+            className={`btn-light text-primary ${buttonBackground} fw-bolder m-2 border-0`}
+            mouseOver={mouseOver}
+            mouseOut={mouseOut}
+            click={handleClick}
+          />
+        </div>
       </form>
     </div>
   );

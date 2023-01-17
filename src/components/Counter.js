@@ -19,13 +19,13 @@ function Counter() {
         <Button
           name="+"
           type="button"
-          func={increase}
+          click={increase}
           className="btn-success m-2"
         />
         <Button
           name="-"
           type="button"
-          func={decrease}
+          click={decrease}
           className="btn-danger m-2"
         />
       </div>

@@ -13,13 +13,17 @@ function Time() {
 
   return (
     <div className="mt-5">
-      <h1>{time}</h1>
-      <Button
-        name="Get Time"
-        type="button"
-        func={getTime}
-        className="btn-info"
-      />
+      <div className="d-flex justify-content-center">
+        <h1>{time}</h1>
+      </div>
+      <div className="d-flex justify-content-center">
+        <Button
+          name="Get Time"
+          type="button"
+          click={getTime}
+          className="btn-info"
+        />
+      </div>
     </div>
   );
 }
