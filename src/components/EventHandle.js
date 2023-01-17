@@ -5,8 +5,10 @@ import Input from "./Input";
 function EventHandle() {
   // States
   const [buttonBackground, setButtonBackground] = useState("bg-light");
-  const [name, setName] = useState("");
-  const [headingName, setHeadingName] = useState("");
+  const [fullName, setFullName] = useState({
+    fName: "",
+    lName: "",
+  });
 
   // Functions I Created
   const mouseOver = () => {
@@ -18,21 +20,41 @@ function EventHandle() {
   };
 
   const handleChange = (event) => {
-    setName(event.target.value);
+    const { name, value } = event.target;
+
+    setFullName((prevValue) => {
+      if (name === "fName") {
+        return {
+          fName: value,
+          lName: prevValue.lName,
+        };
+      } else if (name === "lName") {
+        return {
+          fName: prevValue.fName,
+          lName: value,
+        };
+      }
+    });
   };
 
   const handleClick = (event) => {
     event.preventDefault();
-    setHeadingName(name);
   };
 
   return (
     <div className="text-center bg-danger">
-      <h1>HELLO {headingName}</h1>
+      <h1>HELLO {`${fullName.fName} ${fullName.lName}`}</h1>
       <form onSubmit={handleClick}>
         <Input
           type="text"
-          placeholder="What's your name?"
+          name="fName"
+          placeholder="What's your first name?"
+          onChange={handleChange}
+        />
+        <Input
+          type="text"
+          name="lName"
+          placeholder="What's your last name?"
           onChange={handleChange}
         />
         <Button
