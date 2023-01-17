@@ -46,6 +46,23 @@ function App() {
   let userIsRegistered = false;
   // let currentTime = new Date().getHours();
 
+  const citrus = ["Lemon", "Lime", "Orange"];
+  const fruits = ["Apple", "Banana", "Coconut", ...citrus];
+  console.log(fruits);
+
+  const fullName = {
+    fName: "James",
+    lName: "Bond",
+  };
+
+  const user = {
+    ...fullName,
+    id: 1,
+    username: "jamesbond007",
+  };
+
+  console.log(user);
+
   return (
     <div className="App">
       <Msg />
