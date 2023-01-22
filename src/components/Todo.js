@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Input from "./Input";
 import Button from "./Button";
+import ListItem from "./ListItem";
 
 function Todo() {
   const [inputText, setInputText] = useState("");
@@ -17,6 +18,15 @@ function Todo() {
     });
     setInputText("");
   }
+
+  const deleteItem = (id) => {
+    console.log(id);
+    setItems((prevItems) => {
+      return prevItems.filter((item, index) => {
+        return index !== id;
+      });
+    });
+  };
 
   return (
     <div>
@@ -37,7 +47,7 @@ function Todo() {
       <div className="d-flex justify-content-center bg-dark text-primary">
         <ul>
           {items.map((todoItem, i) => (
-            <li key={i}>{todoItem}</li>
+            <ListItem key={i} id={i} name={todoItem} onChecked={deleteItem} />
           ))}
         </ul>
       </div>
